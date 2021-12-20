@@ -40,7 +40,7 @@ func handleRequests() {
 	myRouter.HandleFunc("/article/{id}", returnSingleArticle)
 	myRouter.HandleFunc("/article", createNewArticle).Methods("POST")
 	myRouter.HandleFunc("/article/{id}", deleteArticle).Methods("DELETE")
-	myRouter.HandleFunc("/article", createNewArticle).Methods("PUT")
+	myRouter.HandleFunc("/article", updateArticle).Methods("PUT")
 	// finally, instead of passing in nil, we want
 	// to pass in our newly created router as the second
 	// argument
